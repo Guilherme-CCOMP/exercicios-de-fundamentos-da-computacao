@@ -34,7 +34,17 @@ Exercícios de hoje 08/09:
 
 
 # 5)
+    n = int(input('Digite um número: '))
+    total_primos = list([])
+    n_atual = 2
 
+    while len(total_primos) < n:
+
+        if e_primo(n_atual):
+            total_primos.append(n_atual)
+        n_atual +=1
+    
+    print(f'Os primos são {total_primos}')
 
 # 6)
     n = int(input('Digite um número: '))
@@ -63,17 +73,19 @@ Exercícios de hoje 08/09:
 
 while True:
 
-    n = int(input('Digite um número: '))
-    total_primos = list([])
-    n_atual = 2
+    num_neutro = 0
+    for i in range(1, 6):
+        n = [list(int(input('Digite um número: ')))]
+    for i in n:
+        if i > num_neutro:
+            num_maior = i
+        elif i < num_neutro:
+            num_menor = i
+        if num_maior < num_menor:
+            num_menor, num_maior = num_maior, num_menor
+        
 
-    while len(total_primos) < n:
-
-        if e_primo(n_atual):
-            total_primos.append(n_atual)
-        n_atual +=1
-    
-    print(f'Os primos são {total_primos}')            
+    print(f'Maior: {num_maior}; Menor: {num_menor}.')
 
     resposta = input('\nDeseja continuar? ')
     if resposta.lower != 's' or resposta.lower != 's':
