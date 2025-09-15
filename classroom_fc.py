@@ -322,12 +322,9 @@ Exercícios de 08/09:
 
     print(f'Foram encontrados {len(pares)}, são eles: {pares}')
 
-'''
-
-while True:
 
     num_neutro = 0
-    for i in range(1, 6):
+    for i in range(4):
         n = [list(int(input('Digite um número: ')))]
     for i in n:
         if i > num_neutro:
@@ -337,9 +334,25 @@ while True:
         if num_maior < num_menor:
             num_menor, num_maior = num_maior, num_menor
         
-
     print(f'Maior: {num_maior}; Menor: {num_menor}.')
 
-    resposta = input('\nDeseja continuar? ')
-    if resposta.lower != 's' or resposta.lower != 's':
+'''
+while True:
+
+    decimal = float(input('Digite o decimal que deseja converter para binário: '))
+    binario = ''
+    quociente = decimal
+
+    if decimal == 0:
+        binario = '0'
+    else:
+        while quociente > 0:
+            resto = int(decimal % 2)
+            binario += str(resto)
+            quociente = decimal // 2
+        
+    print(f'O número {decimal} em binário é: {binario}.')
+
+    resposta = input('Deseja continuar? ').lower()
+    if resposta not in ('s', 'y'):
         break

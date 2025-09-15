@@ -1,3 +1,7 @@
+guilherme.feitosa.15.2021@gmail.com
+git config --global user.email "guilherme.feitosa.15.2021@gmail.com"
+git config --global user.name "Guilherme"
+
 nome_do_projeto/
 ├──.gitignore         # Arquivos e pastas a serem ignorados pelo Git
 ├── README.md          # Documentação principal do projeto

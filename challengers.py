@@ -338,3 +338,57 @@ def e_primo(n):
         if n%i==0:
             return False
     return True
+
+def convercao_binario(decimal):
+    restos = []
+    while decimal % 2 != 0:
+        int(decimal) = decimal % 2
+        restos.insert(0, decimal)
+    numero_binario = "".join(str(r) for r in restos)
+    return numero_binario
+
+def convercao_decimal(binario):
+    restos = []
+    while binario % 2 != 0:
+        int(binario) = binario % 2
+        restos.insert(0, binario)
+    numero_binario = "".join(str(r) for r in restos)
+    return numero_binario
+
+def convercao_binario_decimal(numeros[0], numeros[1]):
+    restos = []
+    while decimal % 2 != 0:
+        int(decimal) = decimal % 2
+        restos.insert(0, decimal)
+    numero_binario = "".join(str(r) for r in restos)
+    return numero_binario
+
+def convercao_decimal_binario(numeros[0], numeros[1]):
+    restos = []
+    while decimal % 2 != 0:
+        int(decimal) = decimal % 2
+        restos.insert(0, decimal)
+    numero_binario = "".join(str(r) for r in restos)
+    return numero_binario
+
+escolha = input('''O que deseja fazer:\n
+                Converter número decimal para binário (1);\n
+                O contrário (2)')\n
+                Ou os dois de uma vez (3)? ''')
+
+if escolha == 1:
+    decimal = float(input('Digite um número: '))
+    print(convercao_binario(decimal))
+elif escolha == 2:
+    binario = float(input('Digite um número: '))
+    print(convercao_binario(binario))
+else:
+    escolha_ordem = input('''Em qual ordem:\n
+                            Decimal, binário (1);\n
+                            O contrário (2)? ''')
+    if escolha_ordem == 1:
+        numeros = float(input('Digite um número: '))
+        print(convercao_decimal_binario(binario))
+    else:
+        numeros = float(input('Digite um número: '))
+        print(convercao_binario_decimal(binario))
