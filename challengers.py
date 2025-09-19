@@ -267,7 +267,7 @@ while True:
 
     for i in numbers:
         if i <= 1:
-          nao_primos.append(i)
+           nao_primos.append(i)
         else:
             for n in range(2, int(math.sqrt(i))+1):
                 if i%n == 0:

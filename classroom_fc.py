@@ -323,18 +323,20 @@ Exercícios de 08/09:
     print(f'Foram encontrados {len(pares)}, são eles: {pares}')
 
 
-    num_neutro = 0
-    for i in range(4):
-        n = [list(int(input('Digite um número: ')))]
-    for i in n:
-        if i > num_neutro:
-            num_maior = i
-        elif i < num_neutro:
-            num_menor = i
-        if num_maior < num_menor:
-            num_menor, num_maior = num_maior, num_menor
-        
-    print(f'Maior: {num_maior}; Menor: {num_menor}.')
+    primeiro_numero = int(input('Digite um número: '))
+    maior = menor = primeiro_numero
+
+    for _ in range(4):
+        numero_atual = int(input('Digite um número: '))
+        if numero_atual > maior:
+            maior = numero_atual
+        if numero_atual < menor:
+            menor = numero_atual
+
+    if maior == menor:
+        print('Os números são iguais!')
+    else:
+        print(f'Maior: {maior}; Menor: {menor}.')
 
 '''
 while True:
