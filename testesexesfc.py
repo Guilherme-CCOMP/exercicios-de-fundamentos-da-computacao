@@ -81,6 +81,7 @@ while True:
 '''
 import math
 
+answer = input('Deseja testar este programa? ')
 while answer.lower() != 's' and answer.lower() != 'y':
 
     soma = 0
@@ -93,4 +94,4 @@ while answer.lower() != 's' and answer.lower() != 'y':
 
         print(soma)
 
-    answer = input('Deseja continuar (S/N ou Y/N)? ')
+    answer = input('Deseja continuar? ')

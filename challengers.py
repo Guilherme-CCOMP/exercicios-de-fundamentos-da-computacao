@@ -177,80 +177,94 @@ Dólar = R · cd, Euro = R · ce
 
     print(f'Os valores correspondentes a R$ {reais:.2f} em dólar e euro são: ${dolar:.2f} e € {euro:.2f}.')
 
-# )
+print("--- Exercício 1: Tabuada ---")
+try:
+    n_tabuada = int(input('De qual número deseja exibir a tabuada? '))
+    
+    print(f"\nExibindo a tabuada de MULTIPLICAÇÃO do {n_tabuada}:")
+    for i in range(1, 11):
+        print(f'{n_tabuada} x {i} = {n_tabuada * i}')
+    print("")
 
-    nota = float(input("Digite sua nota (não tenha vergonha, não fica gravado depois :): "))
+except ValueError:
+    print("Entrada inválida.\n")
 
-    if nota <= 3.99:
-        print("Reprovado.")
-    elif 4 <= nota < 7.1:
-        print("Recuperação!")
-    else:
-        print("Aprovado!")
 
-# )
+# 2: Peça um número N e mostre todos os pares de 1 a N, com a quantidade total.
 
-    numbers = [int(coord) for coord in input('Digite dois números inteiros: ').split(',')]
+print("--- Exercício 2: Números Pares até N ---")
+try:
+    n_pares = int(input('Digite um número: '))
+    pares = []
+    for i in range(2, n_pares + 1, 2):
+        pares.append(i)
+    print(f'Foram encontrados {len(pares)} números pares. São eles: {pares}\n')
+except ValueError:
+    print("Entrada inválida.\n")
 
-    n1, n2 = numbers
 
-    if n1 < n2:
-        print(f"O maior número é {n2}")
-    elif n1 == n2:
-        print(f"O maior número é {n1}")
-    else:
-        print(f"Os números são iguais!")
+# 3: Solicite um número N e exiba uma contagem regressiva até 1.
 
-# )
+print("--- Exercício 3: Contagem Regressiva ---")
+try:
+    n_regressivo = int(input('Digite um número para a contagem regressiva: '))
+    print("Iniciando contagem:")
+    for i in range(n_regressivo, 0, -1):
+        print(i)
+    print("Contagem finalizada.\n")
+except ValueError:
+    print("Entrada inválida.\n")
 
-    preco_valor = [float(n) for n in input('Digite o preço do produto que deseja e o valor disponível: ').split(',')]
 
-    preco, valor = preco_valor
-    diferenca = abs(valor - preco)
+# EXERCÍCIO 5: Escreva um algoritmo que retorne os N primeiros números primos.
 
-    if preco > valor:
-        print(f'Dinheiro insuficiente! Precisará economizar R$ {diferenca}.')
-    else:
-        print(f'Boas compras!.')
+print("--- Exercício 5: N Primeiros Números Primos ---")
+def e_primo(num):
+    if num <= 1: return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0: return False
+    return True
 
-# )
+try:
+    n_primos = int(input('Quantos números primos você deseja encontrar? '))
+    total_primos = []
+    numero_atual = 2
+    while len(total_primos) < n_primos:
+        if e_primo(numero_atual):
+            total_primos.append(numero_atual)
+        numero_atual += 1
+    print(f'Os {n_primos} primeiros primos são: {total_primos}\n')
+except ValueError:
+    print("Entrada inválida.\n")
 
-    ano_atual = date.today().year
-    nascimento = int(input('Digite seu ano de nascimento: '))
+# -----------------------------------------------------------------------------------
+# EXERCÍCIO 6: Leia um número inteiro e conte quantos divisores ele possui.
+# -----------------------------------------------------------------------------------
+print("--- Exercício 6: Contagem de Divisores ---")
+try:
+    n_divisores = int(input('Digite um número para contar seus divisores: '))
+    divisores = []
+    for i in range(1, n_divisores + 1):
+        if n_divisores % i == 0:
+            divisores.append(i)
+    print(f'O número {n_divisores} possui {len(divisores)} divisores. São eles: {divisores}\n')
+except ValueError:
+    print("Entrada inválida.\n")
 
-    idade = ano_atual - nascimento
+# -----------------------------------------------------------------------------------
+# EXERCÍCIO 7: Leia um inteiro n e mostre todos os pares de n até 2 em ordem decrescente.
+# -----------------------------------------------------------------------------------
+print("--- Exercício 7: Pares em Ordem Decrescente ---")
+try:
+    n_pares_dec = int(input('Digite um número: '))
+    pares_dec = []
+    inicio = n_pares_dec if n_pares_dec % 2 == 0 else n_pares_dec - 1
+    for i in range(inicio, 1, -2):
+        pares_dec.append(i)
+    print(f'Foram encontrados {len(pares_dec)} pares em ordem decrescente. São eles: {pares_dec}\n')
+except ValueError:
+    print("Entrada inválida.\n")
 
-    if idade <= 0:
-        print('Erro!')
-    elif idade <= 3:
-        print('Bebê!')
-    elif 4 <= idade <= 11:
-        print('Criança!')
-    elif 12 <= idade <= 17:
-        print('Adolescente!')
-    elif 18 <= idade <= 30:
-        print('Jovem!')
-    elif 31 <= idade <= 64:
-        print('Adulto!')
-    else:
-        print('Idoso!')
-
-import math 
-
-while True:
-
-    n = int(input("Forneca um numero: "))
-    divisors = 0
-
-    for i in range(1, n+1):
-        if 3%i == 0 or 5%i == 0:
-            divisors += i
-
-    print(divisors)
-
-    resposta = input('Deseja continuar? ')
-    if resposta != 's':
-        break
 '''
 from datetime import date
 import math
