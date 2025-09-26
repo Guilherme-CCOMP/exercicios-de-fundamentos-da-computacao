@@ -420,10 +420,6 @@ Dólar = R · cd, Euro = R · ce
     print(f'Os valores correspondentes a R$ {reais:.2f} em dólar e euro são: ${dolar:.2f} e € {euro:.2f}.')
 
 
-import math 
-
-while True:
-
     n = int(input("Forneca um numero: "))
     divisors = 0
 
@@ -472,7 +468,7 @@ while True:
 '''
 while True:
 
-    print(10/2)
+    
 
     resposta = input('Deseja continuar? ').lower()
     if resposta not in ('s', 'y'):
