@@ -465,10 +465,46 @@ Dólar = R · cd, Euro = R · ce
             quociente = decimal // 2
         
     print(f'O número {decimal} em binário é: {binario}.')
+
+    lista = []
+    #print(Opções:
+            #A para inserir um elemento na lista;
+            #R para remover;
+            #I para imprimir;
+            #F para sair.)
+    fazer_o_que = input()
+
+    if fazer_o_que == 'A':
+        elemento = input('O que deseja inserir? ')
+        lista.append(elemento)
+        print(lista)
+    elif fazer_o_que == 'R':
+        elemento = int(input('O que deseja remover (digite o índice)? '))
+        lista.pop(elemento)
+        print(lista)
+    elif fazer_o_que == 'I':
+        print(lista)
+    else:
+        print('Programa encerrado. :\)')
+        break
+
+    numero = [int(n) for n in input("Digite 5 número: ").split(',')]
+    soma = 0
+    for i in numero:
+        soma += i
+    print(soma)
+
+    numero = [int(n) for n in input('Digite a porra toda até quanto o senhor quiser. ').split(',')]
+    contador = 0
+    for i in numero:
+        if i > 10:
+            contador += 1
+    print(f'Há {contador} número(s) maior(es) que dez.')    
 '''
+
 while True:
 
-    
+    #dy/dx = x=> dy = x*dx=> y = x + cte
 
     resposta = input('Deseja continuar? ').lower()
     if resposta not in ('s', 'y'):
